@@ -1,8 +1,6 @@
 <html>
     <head><style>
         h1 {
-            color: black;
-            border-width: 2px;
             border-style: solid;
             border-color: black;
         }
@@ -14,7 +12,7 @@
         <h1> 
             <span id="dummyText">This is the CSS Font Control Page. With this dummy paragraph, the text field 
             below can be used to test and accept RGB color values for this paragraph. We love EECS 348!</span> <br>
-            <input class="color_input" type="text" id="colorInput" placeholder="Enter RGB color value ">
+            <input class="color_input" type="text" id="colorInput" placeholder="Enter RGB color value rgb(r, g, b): ">
             <input class="width_input" type="text" id="widthInput" placeholder="Enter width value (px) for the border">
         </h1>
         <script>
@@ -27,7 +25,7 @@
             });
 
             widthInput.addEventListener('input', function() {
-                dummyText.style.borderWidth = widthInput.value + 'px';
+                document.querySelector('h1').style.borderWidth = widthInput.value + 'px';
             });
         </script>
     </body>
