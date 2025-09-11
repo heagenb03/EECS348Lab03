@@ -9,6 +9,9 @@
             Enter a number: <input type="number" name="number" required>
             <input type="submit" value="Generate Table">
         </form>
+
+        <a href="index.html">Back to Home</a>
+
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $user_number = intval($_POST['number']);
