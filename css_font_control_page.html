@@ -15,7 +15,7 @@
         <h1> 
             <span id="dummyText">This is the CSS Font Control Page. With this dummy paragraph, the text field 
             below can be used to test and accept RGB color values for this paragraph. We love EECS 348!</span> <br>
-            <input class="color_input" type="text" id="colorInput" placeholder="Enter RGB color value rgb(r, g, b): ">
+            <input class="color_input" type="text" id="colorInput" placeholder="Enter RGB color value r, g, b: ">
             <input class="width_input" type="text" id="widthInput" placeholder="Enter width value (px) for the border"> <br>
 
             <a href="index.html">Back to Index</a>
@@ -26,7 +26,7 @@
             const dummyText = document.getElementById('dummyText');
 
             colorInput.addEventListener('input', function() {
-                dummyText.style.color = colorInput.value;
+                dummyText.style.color = 'rgb(' + colorInput.value + ')';
             });
 
             widthInput.addEventListener('input', function() {
