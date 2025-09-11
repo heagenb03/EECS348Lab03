@@ -6,18 +6,19 @@
     <body>
         <h1>Multiplication Table</h1>
         <form method="post" action="">
-            Enter a number: <input type="user_number" name="number" required>
+            Enter a number: <input type="number" name="number" required>
             <input type="submit" value="Generate Table">
         </form>
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $user_number = intval($_POST['user_number']);
+                $user_number = intval($_POST['number']);
                 echo "<h2>Multiplication Table from 1x1 to {$user_number}x{$user_number}</h2>";
                 echo "<table border='1'>";
                 
-                echo "<th'> </th>";
+                echo "<tr>";
+                echo "<th>X</th>";
                 for ($num = 1; $num <= $user_number; $num++) {
-                    echo "<th'>$num</th>";
+                    echo "<th>$num</th>";
                 }
                 echo "</tr>";
 
