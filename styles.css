@@ -16,3 +16,15 @@ h2 {
 input {
     width: 300px;
 }
+
+body {
+    margin: 20px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: Verdana;
+}
+
+p {
+    font-size: 20px;
+    font-family: Arial;
+}
